@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+  font-family: 'Kumbh Sans', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+}
+
+.container {
+  background-repeat: no-repeat;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(180deg, #af67e9, #6565e7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .card {
+  background-color: #e7e7e9;
+  padding: 40px 40px 40px 0;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+}
+
+.container .card .right-bottom {
+  width: 360px;
+  height: 100%;
+  gap: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .card .right-bottom .title {
+  color: #1d1e35;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.container .card .right-bottom .questionAnswer {
+  border-bottom: 1px solid #787887;
+  padding-bottom: 5px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.container .card .right-bottom .questionAnswer .question {
+  color: #787887;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+  cursor: pointer;
+}
+
+.container .card .right-bottom .questionAnswer .question span {
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+  color: #f47c57;
+}
+
+.container .card .right-bottom .questionAnswer .answer {
+  color: #787887;
+  width: 60%;
+  display: none;
+}
+
+.container .card .right-bottom .questionAnswer.parentClicked {
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.container .card .right-bottom .questionAnswer.parentClicked .question {
+  color: black;
+}
+
+.container .card .right-bottom .questionAnswer.parentClicked .question .material-icons {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.container .card .right-bottom .questionAnswer.parentClicked .answer {
+  display: block;
+  color: #4a4b5e;
+}
+
+.container .card .left-top {
+  margin-left: -100px;
+  position: relative;
+}
+
+.container .card .left-top .box {
+  position: absolute;
+  top: 40%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .card .left-top .box:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .container .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 20px;
+    width: 375px;
+    height: 70%;
+    margin-top: 100px;
+  }
+  .container .card .right-bottom {
+    width: 100%;
+  }
+  .container .card .right-bottom .title {
+    text-align: center;
+  }
+  .container .card .right-bottom .questionAnswer .question {
+    font-size: 12px;
+    color: #4a4b5e;
+  }
+  .container .card .right-bottom .questionAnswer .answer {
+    font-size: 11px;
+  }
+  .container .card .left-top {
+    margin-left: 0;
+    margin-top: -140px;
+    width: 300px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

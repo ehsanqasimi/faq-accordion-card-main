@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+//text colors
+$VeryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+$SoftRed: hsl(14, 88%, 65%);
+
+//gradient
+$SoftViolet: hsl(273, 75%, 66%);
+$SoftBlue: hsl(240, 73%, 65%);
+
+//divider color
+$LightGrayishBlue: hsl(240, 5%, 91%);
+
+//text Color
+$VeryDarkGrayishBlue: hsl(237, 12%, 33%);
+$DarkGrayishBlue: hsl(240, 6%, 50%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    user-select: none;
+    overflow: hidden;
+}
+
+.container{
+    background-repeat: no-repeat;
+    height: 100vh;
+    background: linear-gradient(180deg ,$SoftViolet, $SoftBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .card{
+        background-color: $LightGrayishBlue;
+        padding: 40px 40px 40px 0;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 50px;
+        .right-bottom{
+            width: 360px;
+            height: 100%;
+            gap: 5px;
+            display: flex;
+            flex-direction: column;
+            .title{
+                color: $VeryDarkDesaturatedBlue;
+                font-weight: 700;
+                font-size: 30px;
+            }
+            .questionAnswer{
+                border-bottom: 1px solid $DarkGrayishBlue;
+                padding-bottom: 5px;
+                font-weight: 500;
+                font-size: 12px;
+                .question{
+                    color: hsl(240, 6%, 50%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    transition: all ease-in-out 0.4s;
+                    cursor: pointer;
+                    span{
+                        transition: all ease-in-out 0.4s;
+                        color: $SoftRed; 
+                    }
+                }
+                
+                .answer{
+                    color: $DarkGrayishBlue;
+                    width: 60%;
+                    display: none;
+                }
+            }
+            .questionAnswer.parentClicked{
+                transition: all ease-in-out 0.4s;
+                .question{
+                    color: black;
+                    .material-icons{
+                        transform: rotate(180deg);
+                    }
+                }
+                .answer{
+                    display: block;
+                    color: $VeryDarkGrayishBlue;
+                }
+            }
+        }
+
+        .left-top{
+            margin-left: -100px;
+            position: relative;
+            .box{
+                position: absolute;
+                top: 40%;
+                transition: 0.5s;
+                &:hover{
+                    transform: translateY(-10px);
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+
+.attribution{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .container{
+        .card{
+            flex-direction: column-reverse;
+            padding: 20px;
+            width: 375px;
+            height: 70%;
+            margin-top: 100px;
+            .right-bottom{
+                width: 100%;
+                .title{
+                    text-align: center;
+                }
+                .questionAnswer{
+                    .question{
+                        font-size: 12px;
+                        color: $VeryDarkGrayishBlue;
+                        
+                    }
+                    .answer{
+                        font-size: 11px;
+                    }
+                }
+            }
+            .left-top{
+                margin-left: 0;
+                margin-top: -140px;
+                width: 300px;
+                
+            }
+        }
+    }
+}
